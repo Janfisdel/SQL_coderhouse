@@ -21,3 +21,8 @@
 | # | Clase | Contenido de la entrega | 
 | -------- | ---------| ---------|
 |1| Primera entrega Proyecto Final | Script de creacion de tablas y Diagrama entidad relacion en formato MWB y JPG
+
+
+
+## Creado por ✒️
+- Jana Daniela Fisdel
