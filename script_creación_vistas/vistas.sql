@@ -43,34 +43,33 @@ CREATE OR REPLACE VIEW vw_muestras_T553 AS
    -- EN REALIDAD POR VER LAS TABLAS SE QUE EN QUE TRAMO ESTA ESA CAJA PERO CON UNA UNION BUSCO EN TODOS LOS TRAMOS COMO SI NO SUPIERA EN QUE TRAMO ESTA
    -- EL RESULTADO DE LA VISTA ES EN UN SOLO TRAMO
    
-   CREATE OR REPLACE VIEW vw_caja16 AS
-   (SELECT paciente, protocolo, fecha_extraccion
-   FROM tramo_s0
-   WHERE ubicacion_caja = 16
-   UNION
-   SELECT paciente, protocolo, fecha_extraccion
-   FROM tramo_s1
-   WHERE ubicacion_caja = 16
-   UNION
-   SELECT paciente, protocolo, fecha_extraccion
-   FROM tramo_s2 
-   WHERE ubicacion_caja = 16
-   UNION
-   SELECT paciente, protocolo, fecha_extraccion
-   FROM tramo_s3 
-   WHERE ubicacion_caja = 16
-   );
-   
+   CREATE OR REPLACE vw_caja16 AS
+  (SELECT paciente, protocolo, fecha_extraccion
+  FROM tramo_s0 S0 JOIN cajas_muestras CM ON (S0.ubicacion_caja = CM.id_caja)
+  WHERE CM.nombre_caja = 'Caja16'
+  UNION
+  SELECT paciente, protocolo, fecha_extraccion
+  FROM tramo_s1 S1 JOIN cajas_muestras CM ON (S1.ubicacion_caja = CM.id_caja)
+  WHERE CM.nombre_caja = 'Caja16'
+  UNION
+  SELECT paciente, protocolo, fecha_extraccion
+  FROM tramo_s2 S2 JOIN cajas_muestras CM ON (S2.ubicacion_caja = CM.id_caja)
+  WHERE CM.nombre_caja = 'Caja16'
+  UNION
+  SELECT paciente, protocolo, fecha_extraccion
+  FROM tramo_s3 S3 JOIN cajas_muestras CM ON (S3.ubicacion_caja = CM.id_caja)
+  WHERE CM.nombre_caja = 'Caja16'
+  );
    SELECT * FROM vw_caja16;
    
    -- VISTA DE CAJAS CON MENOS DE 50 MUESTRAS
-    CREATE OR REPLACE VIEW cajas_50muestras AS
+    CREATE OR REPLACE VIEW vw_cajas_50muestras AS
 		(SELECT nombre_caja, ubicacion_freezer, cantidad_muestras
         FROM cajas_muestras
         WHERE cantidad_muestras < 50
         ORDER BY cantidad_muestras ASC
 		);
         
-	SELECT * FROM cajas_50muestras;
+	SELECT * FROM vw_cajas_50muestras;
     
     
