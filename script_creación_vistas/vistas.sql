@@ -1,25 +1,25 @@
 use proyecto_sangre;
 
 -- VISTA DE TODOS LOS PACIENTES DE LA PROVINCIA DE JUJUY
-CREATE OR REPLACE VIEW pacientes_jujuy AS
+CREATE OR REPLACE VIEW vw_pacientes_jujuy AS
     ( SELECT id_paciente, apellido_paciente, nombre_paciente, fecha_nacimiento
       FROM pacientes JOIN provincias ON (pacientes.provincia_paciente= provincias.id_provincia)
       WHERE provincias.nombre_provincia ='Jujuy'
     );
 
-SELECT * FROM pacientes_jujuy;
+SELECT * FROM vw_pacientes_jujuy;
 
 -- VISTA DE TODAS LAS CAJAS QUE SE ENCUENTRAN EN EL FREEZER 2
-CREATE OR REPLACE VIEW cajas_freezer2 AS 
+CREATE OR REPLACE VIEW vw_cajas_freezer2 AS 
 	(SELECT nombre_caja, cantidad_muestras 
     FROM cajas_muestras C JOIN freezers F ON (C.ubicacion_freezer = F.id_freezer)
     WHERE F.nombre_freezer = 'Freezer2'
     );
     
-    SELECT * FROM cajas_freezer2;
+    SELECT * FROM vw_cajas_freezer2;
     
 -- VISTA DE TODAS LA MUESTRAS DEL PACIENTE T553
-CREATE OR REPLACE VIEW muestras_T553 AS
+CREATE OR REPLACE VIEW vw_muestras_T553 AS
    (SELECT paciente, protocolo, ubicacion_caja, fecha_extraccion
    FROM tramo_s0
    WHERE paciente = 'T553'
@@ -37,13 +37,13 @@ CREATE OR REPLACE VIEW muestras_T553 AS
    WHERE paciente = 'T553'
    );
    
-   SELECT * FROM muestras_T553;
+   SELECT * FROM vw_muestras_T553;
    
    -- VISTA DE MUESTRAS EN CAJA 16
    -- EN REALIDAD POR VER LAS TABLAS SE QUE EN QUE TRAMO ESTA ESA CAJA PERO CON UNA UNION BUSCO EN TODOS LOS TRAMOS COMO SI NO SUPIERA EN QUE TRAMO ESTA
    -- EL RESULTADO DE LA VISTA ES EN UN SOLO TRAMO
    
-   CREATE OR REPLACE VIEW caja16 AS
+   CREATE OR REPLACE VIEW vw_caja16 AS
    (SELECT paciente, protocolo, fecha_extraccion
    FROM tramo_s0
    WHERE ubicacion_caja = 16
