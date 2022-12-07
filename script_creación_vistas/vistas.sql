@@ -61,7 +61,7 @@ CREATE OR REPLACE VIEW vw_muestras_T553 AS
    WHERE ubicacion_caja = 16
    );
    
-   SELECT * FROM caja16;
+   SELECT * FROM vw_caja16;
    
    -- VISTA DE CAJAS CON MENOS DE 50 MUESTRAS
     CREATE OR REPLACE VIEW cajas_50muestras AS
