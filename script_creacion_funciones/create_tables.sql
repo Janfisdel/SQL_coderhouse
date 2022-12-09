@@ -43,54 +43,18 @@ create table if not exists CAJAS_MUESTRAS(
      
 );
 
--- Todas las tablas siguientes son similares. Cada una representa un tramo del estudio en el que se tomó muestras de casi todos los pacientes. 
--- Cada tramo incluye muchas muestas de sangre que estan guardadas en difentes cajas ( de la tabla anterior). 
--- En este caso ejemplifiqué con 3 tablas, para 3 tramos pero hay mas de 20 tramos en total.
+-- Tabla con todas las muestras del proyecto. Cada paciente tiene mas de una muestra, como mucho una en cada proyecto.
+-- No todos los paciente tienen muestras en todos los tramos
 
-drop table if exists tramo_S0;
-create table if not exists tramo_S0(
-    id_muestraS0 int not null auto_increment,
+drop table if exists  muestras_proyecto;
+create table if not exists muestras_proyecto(
+    id_muestra int not null auto_increment,
     paciente varchar(4) not null,
     protocolo int not null,
     ubicacion_caja int not null,
     fecha_extraccion date,
-    primary key (id_muestraS0, protocolo),
-    CONSTRAINT `fk_muestraS0` foreign key(ubicacion_caja) references cajas_muestras(id_caja),
-    CONSTRAINT `fk_pacientesS0` foreign key(paciente) references pacientes(id_paciente)
-);
-
-drop table if exists tramo_S1;
-create table if not exists tramo_S1(
-    id_muestraS1 int not null auto_increment,
-    paciente varchar(4) not null,
-    protocolo int not null,
-    ubicacion_caja int not null,
-    fecha_extraccion date,
-    primary key (id_muestraS1, protocolo),
-    CONSTRAINT `fk_muestraS1` foreign key(ubicacion_caja) references cajas_muestras(id_caja),
-    CONSTRAINT `fk_pacientesS1` foreign key(paciente) references pacientes(id_paciente)
-);
-
-drop table if exists tramo_S2;
-create table if not exists tramo_S2(
-    id_muestraS2 int not null auto_increment,
-    paciente varchar(4) not null,
-    protocolo int not null,
-    ubicacion_caja int not null,
-    fecha_extraccion date,
-    primary key (id_muestraS2, protocolo),
-    CONSTRAINT `fk_muestraS2` foreign key(ubicacion_caja) references cajas_muestras(id_caja),
-    CONSTRAINT `fk_pacientesS2` foreign key(paciente) references pacientes(id_paciente)
-);
-
-drop table if exists tramo_S3;
-create table if not exists tramo_S3(
-    id_muestraS3 int not null auto_increment,
-    paciente varchar(4) not null,
-    protocolo int not null,
-    ubicacion_caja int not null,
-    fecha_extraccion date,
-    primary key (id_muestraS3, protocolo),
-    CONSTRAINT `fk_muestraS3` foreign key(ubicacion_caja) references cajas_muestras(id_caja),
-    CONSTRAINT `fk_pacientesS3` foreign key(paciente) references pacientes(id_paciente)
+    tramo_proyecto varchar(2) not null,
+    primary key (id_muestra, protocolo),
+    CONSTRAINT `fk_muestra` foreign key(ubicacion_caja) references cajas_muestras(id_caja),
+    CONSTRAINT `fk_pacientes` foreign key(paciente) references pacientes(id_paciente)
 );

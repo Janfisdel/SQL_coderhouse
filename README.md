@@ -20,9 +20,10 @@
 ### _Contenido del repositorio_
 | # | Clase | Contenido de la entrega | 
 | -------- | ---------| ---------|
-|1| Primera entrega Proyecto Final | Script de creacion de tablas y Diagrama entidad relacion en formato MWB y JPG
-|2| Inserción con importación | Script de creacion de tablas, script de insercion en tabla "freezer" y "cajas_muestras" y archivos .csv para insercion en "cajas_muestras" y el resto de las tablas
-|3| Creación de vistas | Script de creacion de tablas, script de insercion a tablas, archivos de insercion .csv, script de 5 vistas
+|1| Primera entrega Proyecto Final | Script de creación de tablas y Diagrama entidad relación en formato MWB y JPG
+|2| Inserción con importación | Script de creación de tablas, script de inserción en tabla "freezer" y "cajas_muestras" y archivos .csv para inserción en "cajas_muestras" y el resto de las tablas
+|3| Creación de vistas | Script de creación de tablas, script de inserción a tablas, archivos de inserción .csv, script de 5 vistas
+|4| Creación de funciones | Script de creación de tablas, script de inserción a tablas, archivos de insercion .csv, script de 2 funciones
 
 
 
