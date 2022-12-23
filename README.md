@@ -25,6 +25,7 @@
 |3| Creación de vistas | Script de creación de tablas, script de inserción a tablas, archivos de inserción .csv, script de 5 vistas
 |4| Creación de funciones | Script de creación de tablas, script de inserción a tablas, archivos de insercion .csv, script de 2 funciones
 |5|  Creación stored procedures | Script de creacion de tablas, script de insercion a tablas freezer, archivos de inserción .csv, script de creacion de 2 stored procedures
+|6| Creación de triggers | Script de creacion de tablas, script de insercion a tablas, archivos de insercion .csv, script de creacion de 4 triggers
 
 
 
