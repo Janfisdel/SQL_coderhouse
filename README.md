@@ -26,6 +26,7 @@
 |4| Creación de funciones | Script de creación de tablas, script de inserción a tablas, archivos de insercion .csv, script de 2 funciones
 |5|  Creación stored procedures | Script de creacion de tablas, script de insercion a tablas freezer, archivos de inserción .csv, script de creacion de 2 stored procedures
 |6| Creación de triggers | Script de creacion de tablas, script de insercion a tablas, archivos de insercion .csv, script de creacion de 4 triggers
+|7 | Segunda entrega proyecto final | Script de creación de tablas, Script de inserción en tablas 'Freezzers' y 'cajas_muestras', carpeta con archivos .CSV para inserción por importación, PDF indicando como importar registros, script de creación de vistas, script de creación de funciones, script de creación de stored procedures
 
 
 
