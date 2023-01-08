@@ -29,7 +29,7 @@
 |7 | Segunda entrega proyecto final | Script de creación de tablas, Script de inserción en tablas 'Freezzers' y 'cajas_muestras', carpeta con archivos .CSV para inserción por importación, PDF indicando como importar registros, script de creación de vistas, script de creación de funciones, script de creación de stored procedures
 |8| Implementación de sentencias | Script de creación de tablas, script de inserción en tablas 'Freezers' y 'cajas_muestras', carpeta con archivos .CSV par inserción por importacion, script de creación de 2 usuarios y sus permisos
 |9 | Sentencias del sublenguaje TCL | Script de creación de tablas, script de inserción en tablas 'Freezers' y 'cajas_muestras', carpeta con archivos .CSV para inserción por importación, script con sentencias TCL
-
+|10 | Backup de base de datos | Script de creacion de tablas, archivo .SQL con el backup de los datos de todas las tablas|
 
 ## Creado por ✒️
 - Jana Daniela Fisdel
