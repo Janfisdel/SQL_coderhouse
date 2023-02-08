@@ -30,6 +30,7 @@
 |8| Implementación de sentencias | Script de creación de tablas, script de inserción en tablas 'Freezers' y 'cajas_muestras', carpeta con archivos .CSV par inserción por importacion, script de creación de 2 usuarios y sus permisos
 |9 | Sentencias del sublenguaje TCL | Script de creación de tablas, script de inserción en tablas 'Freezers' y 'cajas_muestras', carpeta con archivos .CSV para inserción por importación, script con sentencias TCL
 |10 | Backup de base de datos | Script de creacion de tablas, archivo .SQL con el backup de los datos de todas las tablas|
+|11 | PROYECTO FINAL | Proyecto final del curso de SQL. Incluye archivo de documentación, .TXT con el orden de implementación de scripts y Scripts para la creacion de schema, tablas, inserción de registros, vistas, funciones, triggers, procedimientos, creación de usuarios, sentencias DCL y archivos para inserción de registros por importacion.
 
 ## Creado por ✒️
 - Jana Daniela Fisdel

@@ -1,0 +1,14 @@
+Orden de ejecución de scripts. 
+Se encuentran dentro de la carpeta llamada "03_scripts":
+
+01_create_schema: Creación de esquema de base de datos llamado "proyecto_chagas".
+02_create_tables: Creación de tablas pertenecientes a dicho esquema. Creación de dos tablas para auditoria.
+03_insert_datos: Inserción de registros a tablas "provincias", "obra_social", "freezers", "tramos_proyecto".
+04_archivosCSV: En esta carpeta se encuentran los archivos .CSV para la inserción de registros por importacion en MySQL a tablas "cajas_muestras", "pacientes", "muestras_proyecto".
+05_views: creación de vistas
+06_functions:  creación de funciones
+07_stored_procedures: creación de stored procedures
+08_triggers: creación de triggers.
+09_DCL: creación de dos usuarios
+10_TCL: funcionamiento de los comandos ROLLBACK, SAVEPOINT y COMMIT
+11_backup: creación de un archivo unico de backup para el esquema, las tablas y los registros que la conforman.
